@@ -65,7 +65,7 @@ class RamDiskBuilderGUI:
                 # Liga ficheiros em memória (estilo ramdisk)
                 self.memory_buffer =self.memory_buffer +  "|"+paths[len(paths)-1]+"|" + data
                 self.loaded_files.append(path)
-                data = data + "|"
+                
                 self.log(f"[OK] Carregado: {path} ({len(data)} bytes)\n")
             except Exception as e:
                 self.log(f"[ERRO] {path}: {e}\n")
@@ -87,6 +87,7 @@ class RamDiskBuilderGUI:
             return
 
         try:
+            self.memory_buffer =self.memory_buffer +  "|"
             with open(path, "w") as f:
                 f.write(self.memory_buffer)
 
