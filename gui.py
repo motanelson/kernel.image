@@ -57,13 +57,14 @@ class RamDiskBuilderGUI:
 
         for path in paths:
             try:
+                data=""
                 paths=path.split("/")
                 with open(path, "r") as f:
                     
                     data = str(f.read()).replace("|","\xff")
 
                 # Liga ficheiros em memória (estilo ramdisk)
-                self.memory_buffer =self.memory_buffer +  "|"+paths[len(paths)-1]+"|" + data
+                self.memory_buffer =self.memory_buffer +paths[len(paths)-1]+"|" + data +  "|"
                 self.loaded_files.append(path)
                 
                 self.log(f"[OK] Carregado: {path} ({len(data)} bytes)\n")
@@ -87,7 +88,7 @@ class RamDiskBuilderGUI:
             return
 
         try:
-            self.memory_buffer =self.memory_buffer +  "|"
+            self.memory_buffer =self.memory_buffer +"\x00"
             with open(path, "w") as f:
                 f.write(self.memory_buffer)
 
