@@ -1,2 +1,1 @@
-# gui.txt.ram.disk.mouter
-mounts in a single file a ram disk txt
+(https://packages.debian.org/stable/kernel/linux-image-6.12.31-amd64)
