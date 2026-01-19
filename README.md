@@ -1,5 +1,7 @@
 kernel linux
 
+Attention, version 6 this project can only be used for educational and non-commercial purposes; it cannot be sold. It is only for young people to learn how Linux works. The vmlinuz and initrd.img files are part of an operating system and must be compiled from scratch to be distributed commercially.
+
 
 Linux Kernel 2.x – Overview and Advantages
 The Linux Kernel 2.x series, released between 1996 and 2011, represents one of the most important eras in the history of Linux. During this long-lived branch, Linux evolved from a simple Unix-like kernel into a mature, stable, and highly scalable operating system core, suitable for desktops, servers, and embedded systems.
